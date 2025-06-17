@@ -1,42 +1,90 @@
-<div class="flex justify-center" style={`background-image: url('/slide.png'); background-size: cover; background-position: center;`}>
-    <ol class="list-decimal font-mono text-sm mt-24 mb-5">
+---
+import {Image} from "astro:assets";
+import java from "../assets/symbol_java.png";
+import gradle from "../assets/symbol_gradle.png";
+import maven from "../assets/symbol_maven.png";
+import renovate from "../assets/symbol_renovate.png";
+import dependabot from "../assets/symbol_dependabot.png";
+import warn from "../assets/warn.png";
+---
+<div class="justify-center font-mono" style={`background-image: url('/slide.png'); background-size: contain; background-position: center;`}>
+    <div class="font-bold text-2xl py-3 text-center">Recipe for Carefree Dependency Management</div>
+    <ol class="list-decimal text-sm mt-2 pb-4 pl-16">
         <li>
-            Decide for one method and define Dependencies between Modules in dedicated files
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🧩 Java Module System: &lt;module-folder&gt;/src/main/java/module-info.java
-🐘 Gradle:             &lt;module-folder&gt;/build.gradle.kts
-🦉 Maven:              &lt;module-folder&gt;/pom.xml</pre>
+            <div class="font-bold">Decide for one method and define Dependencies between Modules in dedicated files</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={java} alt="Java" style="height: 0.8rem; width: auto;" />
+                <div>Java Module System: . . &lt;module-folder&gt;/src/main/java/module-info.java</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={gradle} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Gradle: . . . . . . . . &lt;module-folder&gt;/build.gradle.kts</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={maven} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Maven:&nbsp;  . . . . . . . . &lt;module-folder&gt;/pom.xml</div>
+            </div>
         </li>
         <li>
-            Version management in a dedicated file –                    🚨 do not mix with 1 🚨
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🐘 Gradle:  &lt;bom-folder&gt;/build.gradle.kts
-🦉 Maven:   &lt;bom-folder&gt;/pom.xml</pre>
+            <div class="font-bold">Version management in a dedicated file</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={gradle} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Gradle: . . . . . . . . &lt;bom-folder&gt;/build.gradle.kts</div>
+                <Image src={warn} class="ml-32" alt="Warn" style="height: 0.8rem; width: auto;" />
+                <div class="text-red-600">Do not mix with 1.</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={maven} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Maven:&nbsp;  . . . . . . . . &lt;bom-folder&gt;/pom.xml</div>
+            </div>
         </li>
         <li>
-            Configure each build concern in dedicated files –           🚨 do not mix with 1 🚨
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🐘 Gradle:  &lt;plugins-folder&gt;/&lt;build-concern&gt;.gradle.kts (plugin composition)
-🦉 Maven:   &lt;configs-folder&gt;/&lt;build-concern&gt;/pom.xml    (parent pom hierarchy)</pre>
+            <div class="font-bold mt-2">Configure each build concern in a dedicated file</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={gradle} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Gradle: . . . . . . . . &lt;plugins-folder&gt;/&lt;build-concern&gt;.gradle.kts</div>
+                <Image src={warn} class="ml-2" alt="Warn" style="height: 0.8rem; width: auto;" />
+                <div class="text-red-600">Do not mix with 1.</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={maven} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Maven:&nbsp;  . . . . . . . . &lt;configs-folder&gt;/&lt;build-concern&gt;/pom.xml</div>
+            </div>
         </li>
         <li>
-            Conflict management in a dedicated file –                   🚨 do not mix with 1 🚨
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🐘 Gradle:  &lt;plugins-folder&gt;/dependency-rules.gradle.kts
-🦉 Maven:   &lt;configs-folder&gt;/dependency-rules/pom.xml</pre>
+            <div class="font-bold mt-2">Conflict management in a dedicated file</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={gradle} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Gradle: . . . . . . . . &lt;plugins-folder&gt;/dependency-rules.gradle.kts</div>
+                <Image src={warn} class="ml-1" alt="Warn" style="height: 0.8rem; width: auto;" />
+                <div class="text-red-600">Do not mix with 1.</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={maven} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Maven:&nbsp;  . . . . . . . . &lt;configs-folder&gt;/dependency-rules/pom.xml</div>
+            </div>
         </li>
         <li>
-            Configure dependency analysis and make it a regular check
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🐘 Gradle:  &lt;plugins-folder&gt;/quality-check.gradle.kts
-🦉 Maven:   &lt;configs-folder&gt;/quality-check/pom.xml</pre>
+            <div class="font-bold mt-2">Configure dependency analysis and make it a regular check</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={gradle} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Gradle: . . . . . . . . &lt;plugins-folder&gt;/quality-check.gradle.kts</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={maven} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Maven:&nbsp;  . . . . . . . . &lt;configs-folder&gt;/quality-check/pom.xml</div>
+            </div>
         </li>
         <li>
-            Configure Renovate or Dependabot for automatic update PRs
-            <pre class="font-mono text-sm bg-transparent p-0 m-0">
-🖌️ Renovate:   renovate.json
-🤖 Dependabot: .github/dependabot.yml
-    </pre>
+            <div class="font-bold mt-2">Configure Renovate or Dependabot for automatic update PRs</div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={renovate} alt="Gradle" style="height: 0.8rem; width: auto;" />
+                <div>Renovate: . . . . . . . renovate.json</div>
+            </div>
+            <div class="flex items-center gap-2 text-gray-600">
+                <Image src={dependabot} alt="Maven" style="height: 0.8rem; width: auto;" />
+                <div>Dependabot: . . . . . .  .github/dependabot.yml</div>
+            </div>
         </li>
     </ol>
 </div>

@@ -1,21 +1,32 @@
 [
+
   {
-    "ref": "202501",
+    "ref": "202503.png",
+    "title": "Carefree Dependency Management for Java Projects",
+    "link": "https://javaforumnord.de/2025/programm/#:~:text=Jendrik%20Johannes"
+  },
+  {
+    "ref": "202502.png",
+    "title": "Carefree Dependency Management for Java Projects",
+    "link": "https://www.java-forum-stuttgart.de/vortraege/unbeschwertes-dependency-management-fuer-java-projekte"
+  },
+  {
+    "ref": "202501.jpg",
     "title": " Combining Java Modules and Gradle for elegant project structures",
     "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2025.pdf"
   },
   {
-    "ref": "202402",
+    "ref": "202402.jpg",
     "title": "Boosting Developer Productivity Through Better Modularity",
     "link": "https://dpe.org/sessions/jendrik-johannes/boosting-developer-productivity-through-better-modularity"
   },
   {
-    "ref": "202401",
+    "ref": "202401.jpg",
     "title": "Combining Java Modules and Gradle for elegant project structures",
     "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2024.pdf"
   },
   {
-    "ref": "202301",
+    "ref": "202301.jpg",
     "title": "Modularizing Projects with the Java Module System and Gradle",
     "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2023.pdf"
   }
