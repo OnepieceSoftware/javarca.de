@@ -1,0 +1,26 @@
+[
+  {
+    "title": "What is a Java Module?"
+  },
+  {
+    "title": "Defining Dependencies between Modules"
+  },
+  {
+    "title": "Managing Versions of 3rd party Modules"
+  },
+  {
+    "title": "Using a Build System to retrieve and build Modules"
+  },
+  {
+    "title": "Managing conflicting Modules"
+  },
+  {
+    "title": "Staying carefree by using dependency analysis"
+  },
+  {
+    "title": "Staying carefree through automated updates"
+  },
+  {
+    "title": "The JavaRCA.de recipe"
+  }
+]

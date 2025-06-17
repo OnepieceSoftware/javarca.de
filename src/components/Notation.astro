@@ -1,0 +1,55 @@
+---
+import {Image} from "astro:assets";
+import java from "../assets/java.png";
+import gradle from "../assets/gradle.png";
+import maven from "../assets/maven.png";
+---
+
+<div class="flex bg-amber-50 bg-opacity-80 rounded-xl shadow-md text-gray-800 font-extralight text-justify p-4 my-6">
+    The JavaRCA recipe works with the common approaches to define dependencies in Java projects.
+    For new projects, it's recommended to use the Java Module System for dependency definition, with Gradle as the build tool.
+    If you rely on frameworks that don't yet support the Module System well, you may use Gradle plainly.
+    If you prefer Maven – or if you work on an existing Maven-based project – you can use that too, with or without the Module System.
+    What matters most is being intentional and aware of your setup.
+    (You can learn more about each approach in the video series on the recipe.)
+</div>
+
+<div class="flex flex-row justify-center gap-x-52 my-2">
+    <Image src={java} alt="Java" style="height: 5rem; width: auto;" />
+    <Image src={gradle} alt="Gradle" style="height: 5rem; width: auto;" />
+    <Image src={maven} alt="Maven" style="height: 5rem; width: auto;" />
+</div>
+
+<div class="flex flex-row gap-x-4">
+<pre class="bg-gray-900 text-green-200 w-80 rounded-lg p-4 overflow-x-clip text-sm">
+{` /* Java Module System¹ */
+
+requires transitive
+  de.javarca.base.model;
+requires
+  org.apache.commons.io;
+`}</pre>
+    <pre class="bg-gray-900 text-green-200 w-80 rounded-lg p-4 overflow-x-clip text-sm">
+{`       /* Gradle */
+
+api(
+  project(":base-model")
+)
+implementation(
+  "commons-io:commons-io"
+)
+`}</pre>
+    <pre class="bg-gray-900 text-green-200 w-90 rounded-lg p-4 overflow-x-clip text-sm">
+{`          <!-- Maven -->
+
+<dependency>
+  <groupId>de.javarca</groupId>
+  <artifactId>base-model</artifactId>
+  <version>\${revision}</version>
+</dependency>
+<dependency>
+  <groupId>commons-io</groupId>
+  <artifactId>commons-io</artifactId>
+</dependency>`}</pre>
+
+</div>

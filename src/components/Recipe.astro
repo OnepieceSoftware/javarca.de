@@ -1,0 +1,42 @@
+<div class="flex justify-center" style={`background-image: url('/slide.png'); background-size: cover; background-position: center;`}>
+    <ol class="list-decimal font-mono text-sm mt-24 mb-5">
+        <li>
+            Decide for one method and define Dependencies between Modules in dedicated files
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🧩 Java Module System: &lt;module-folder&gt;/src/main/java/module-info.java
+🐘 Gradle:             &lt;module-folder&gt;/build.gradle.kts
+🦉 Maven:              &lt;module-folder&gt;/pom.xml</pre>
+        </li>
+        <li>
+            Version management in a dedicated file –                    🚨 do not mix with 1 🚨
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🐘 Gradle:  &lt;bom-folder&gt;/build.gradle.kts
+🦉 Maven:   &lt;bom-folder&gt;/pom.xml</pre>
+        </li>
+        <li>
+            Configure each build concern in dedicated files –           🚨 do not mix with 1 🚨
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🐘 Gradle:  &lt;plugins-folder&gt;/&lt;build-concern&gt;.gradle.kts (plugin composition)
+🦉 Maven:   &lt;configs-folder&gt;/&lt;build-concern&gt;/pom.xml    (parent pom hierarchy)</pre>
+        </li>
+        <li>
+            Conflict management in a dedicated file –                   🚨 do not mix with 1 🚨
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🐘 Gradle:  &lt;plugins-folder&gt;/dependency-rules.gradle.kts
+🦉 Maven:   &lt;configs-folder&gt;/dependency-rules/pom.xml</pre>
+        </li>
+        <li>
+            Configure dependency analysis and make it a regular check
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🐘 Gradle:  &lt;plugins-folder&gt;/quality-check.gradle.kts
+🦉 Maven:   &lt;configs-folder&gt;/quality-check/pom.xml</pre>
+        </li>
+        <li>
+            Configure Renovate or Dependabot for automatic update PRs
+            <pre class="font-mono text-sm bg-transparent p-0 m-0">
+🖌️ Renovate:   renovate.json
+🤖 Dependabot: .github/dependabot.yml
+    </pre>
+        </li>
+    </ol>
+</div>

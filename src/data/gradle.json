@@ -1,0 +1,42 @@
+[
+  {
+    "entry": "26",
+    "ref": "HqAp9JBl2_U",
+    "alt": "The Classpath"
+  },
+  {
+    "entry": "27",
+    "ref": "Z5n9VK3sOnI",
+    "alt": "Multiple Compile Classpaths"
+  },
+  {
+    "entry": "28",
+    "ref": "Lipf5piizZc",
+    "alt": "Clean Compile Classpaths with the Dependency Analysis Plugin"
+  },
+  {
+    "entry": "29",
+    "ref": "KocTqF0hO_8",
+    "alt": "Detect and Resolve Collisions on a Classpath"
+  },
+  {
+    "entry": "30",
+    "ref": "g4PyEmYotwk",
+    "alt": "Discover Security Vulnerabilities"
+  },
+  {
+    "entry": "31",
+    "ref": "X9u1taDwLSA",
+    "alt": "The Module Path"
+  },
+  {
+    "entry": "32",
+    "ref": "T9U0BOlVc-c",
+    "alt": "Artifact Transforms"
+  },
+  {
+    "entry": "33",
+    "ref": "6rFEDcP8Noc",
+    "alt": "Classpath and Module Path in Testing"
+  }
+]

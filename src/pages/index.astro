@@ -1,0 +1,145 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+import Recipe from "../components/Recipe.astro";
+import Notation from "../components/Notation.astro";
+
+import java from "../assets/java.png";
+import gradle from "../assets/gradle.png";
+import maven from "../assets/maven.png";
+import renovate from "../assets/renovate.png";
+
+import shelf from "../assets/shelf.png";
+
+import videos from "../data/videos.json";
+import gradleVideos from "../data/gradle.json";
+import presentations from "../data/presentations.json";
+import explore from "../data/explore.json";
+---
+
+<Layout>
+	<section class="py-12 flex flex-col">
+		<div class="max-w-4xl mx-auto">
+			<h1 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-mono text-center p-4 my-6">
+				JavaRCA:&nbsp;<span class="font-bold">Java</span>&nbsp;<span class="font-bold">R</span>ecipe for&nbsp;<span class="font-bold">C</span>arefree dependency&nbsp;<span class="font-bold">A</span>dministration
+			</h1>
+
+			<div class="flex justify-center bg-amber-50 bg-opacity-80 rounded-xl shadow-md text-gray-800 font-extralight text-center p-4 my-6">
+				Modularization and Dependency Management in Java projects does not have to be a mess.
+				Take a fresh and playful perspective at this topic with the concepts and tools available in and for modern Java.
+			</div>
+
+			<div class="flex flex-row justify-center gap-8 my-6">
+				<Image src={java} alt="Java" style="height: 5rem; width: auto;" />
+				<Image src={gradle} alt="Gradle" style="height: 5rem; width: auto;" />
+				<Image src={maven} alt="Maven" style="height: 5rem; width: auto;" />
+				<Image src={renovate} alt="Renovate" style="height: 5rem; width: auto;" />
+			</div>
+
+			<div class="flex bg-amber-50 bg-opacity-80 rounded-xl shadow-md text-gray-800 font-extralight text-justify p-4 my-4">
+				Your Java program is made up of JAR files — the modular building blocks of your software.
+				Most come from open-source libraries, which are easy to add: like jars full of delicious jam, free for the taking from public repositories.
+				But over time, these sweet-looking dependencies carry a hidden cost. As libraries evolve, maintenance becomes a burden. In long-lived projects, dependency management often turns into a tangled mess — tedious, error-prone, and time-consuming.
+				With a modern Java toolset, you can avoid that. The JavaRCA recipe provides a clear guideline to help you do just that.
+			</div>
+
+			<div class="flex justify-center">
+				<Image src={shelf} alt="Shelf filled with open-source Jars" class="max-w-full h-auto" />
+			</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Get Started: Clarify your choice of Dependency Definition notation
+			</h2>
+
+			<Notation/>
+
+			<div class="flex justify-center bg-gray-900 text-sm bg-opacity-80 rounded-xl shadow-md text-gray-400 font-extralight text-center p-2 my-2">
+				¹If you use the Java Module System for dependency definition, you still need Gradle or Maven as build system.
+			</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 mt-8">
+				The Recipe
+			</h2>
+
+			<Recipe/>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Video Series
+			</h2>
+
+			<div class="grid grid-cols-4 gap-2 my-6">
+				{videos.map((vid) => (
+					<div class="relative w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
+						<img src="/soon.jpg" alt={vid.title}/>
+						<div class="absolute w-48 justify-center inset-0 text-gray-50 py-11 px-6">{vid.title}</div>
+					</div>
+				))}
+			</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Explore
+			</h2>
+
+			<div class="grid grid-cols-4 gap-2 my-6">
+				{explore.map((p) => (
+					<div class="w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
+						<a href={p.link} target="_blank" title={p.title}>
+							<img src={`${p.ref}.png`} alt={p.title}/>
+						</a>
+					</div>
+				))}
+			</div>
+
+			<div>JavaRCA.de -> https://github.com/jjohannes/javarcade</div>
+			<div>JavaRCA.de -> Explore the sample in the explorer application [DOWNLOAD]</div>
+			<div>JavaRCA.de -> Enjoy a Game [DOWNLOAD]</div>
+			<div>gradle-project-setup-howto</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Presentations
+			</h2>
+
+			<div class="grid grid-cols-4 gap-2 my-6">
+				{presentations.map((p) => (
+					<div class="w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
+						<a href={p.link} target="_blank" title={p.title}>
+							<img src={`${p.ref}.jpg`} alt={p.title}/>
+						</a>
+					</div>
+				))}
+			</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Dive deeper into Java modularity and Gradle
+			</h2>
+
+			<div class="grid grid-cols-4 gap-2 my-6">
+				{gradleVideos.map((vid) => (
+					<div class="w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
+						<a href={`https://www.youtube.com/watch?v=${vid.ref}&list=PLWQK2ZdV4Yl2k2OmC_gsjDpdIBTN0qqkE`} target="_blank" title={vid.alt}>
+							<img src={`https://onepiecesoftware.github.io/img/videos/${vid.entry}.png`} alt={vid.alt}/>
+						</a>
+					</div>
+				))}
+			</div>
+
+			<h2 class="flex justify-center bg-amber-700 bg-opacity-80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-6">
+				Support
+			</h2>
+
+			<div class="w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 text-center font-bold p-2">
+				<a href="https://onepiece.software">onepiece.Software - Training and Consulting on Gradle and the Java Module System</a>
+			</div>
+
+			<hr class="my-8 border-amber-700 border-t-2 rounded" />
+
+			<div class="w-50 h-auto bg-amber-50 bg-opacity-40 rounded shadow-md text-gray-600 text-sm text-center p-2">
+				Disclaimer: Java and the Java logo are trademarks of the Oracle Corporation.
+				Gradle and the Gradle logo are trademarks of Gradle Inc.
+				Apache Maven and the Apache Maven logo are trademarks of the Apache Software Foundation.
+				Site operated by <a href="https://onepiece.software">onepiece.Software</a>.
+			</div>
+		</div>
+	</section>
+</Layout>

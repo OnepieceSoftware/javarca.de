@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "xplore-1",
+    "title": "Explore the javaracade.app example in the explorer app",
+    "link": "http://javarca.de/download-explorer"
+  },
+  {
+    "ref": "xplore-2",
+    "title": "Explore the javaracade.app example sources",
+    "link": "https://github.com/jjohannes/javarcade"
+  },
+  {
+    "ref": "xplore-3",
+    "title": "Take a break and enjoy the javaracade.app game",
+    "link": "http://javarca.de/download-app"
+  },
+  {
+    "ref": "xplore-4",
+    "title": "How to set up a larger Gradle project",
+    "link": "https://github.com/jjohannes/gradle-project-setup-howto"
+  }
+]

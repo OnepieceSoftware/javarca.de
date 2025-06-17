@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "202501",
+    "title": " Combining Java Modules and Gradle for elegant project structures",
+    "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2025.pdf"
+  },
+  {
+    "ref": "202402",
+    "title": "Boosting Developer Productivity Through Better Modularity",
+    "link": "https://dpe.org/sessions/jendrik-johannes/boosting-developer-productivity-through-better-modularity"
+  },
+  {
+    "ref": "202401",
+    "title": "Combining Java Modules and Gradle for elegant project structures",
+    "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2024.pdf"
+  },
+  {
+    "ref": "202301",
+    "title": "Modularizing Projects with the Java Module System and Gradle",
+    "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2023.pdf"
+  }
+]
