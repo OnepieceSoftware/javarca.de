@@ -1,4 +1,15 @@
 [
+
+  {
+    "ref": "202503",
+    "title": "Carefree Dependency Management for Java Projects",
+    "link": "https://javaforumnord.de/2025/programm/#:~:text=Jendrik%20Johannes"
+  },
+  {
+    "ref": "202502",
+    "title": "Carefree Dependency Management for Java Projects",
+    "link": "https://www.java-forum-stuttgart.de/vortraege/unbeschwertes-dependency-management-fuer-java-projekte"
+  },
   {
     "ref": "202501",
     "title": " Combining Java Modules and Gradle for elegant project structures",
