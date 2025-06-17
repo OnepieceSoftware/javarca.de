@@ -11,13 +11,13 @@ import maven from "../assets/maven.png";
     If you rely on frameworks that don't yet support the Module System well, you may use Gradle plainly.
     If you prefer Maven – or if you work on an existing Maven-based project – you can use that too, with or without the Module System.
     What matters most is being intentional and aware of your setup.
-    (You can learn more about each approach in the video series on the recipe.)
+    <!-- (You can learn more about each approach in the video series on the recipe.) -->
 </div>
 
-<div class="flex flex-row justify-center gap-x-52 my-2">
-    <Image src={java} alt="Java" style="height: 5rem; width: auto;" />
-    <Image src={gradle} alt="Gradle" style="height: 5rem; width: auto;" />
-    <Image src={maven} alt="Maven" style="height: 5rem; width: auto;" />
+<div class="flex flex-row justify-center gap-x-60 my-2">
+    <Image src={java} alt="Java" style="height: 4rem; width: auto;" />
+    <Image src={gradle} alt="Gradle" style="height: 4rem; width: auto;" />
+    <Image src={maven} alt="Maven" style="height: 4rem; width: auto;" />
 </div>
 
 <div class="flex flex-row gap-x-4">
@@ -25,7 +25,7 @@ import maven from "../assets/maven.png";
 {` /* Java Module System¹ */
 
 requires transitive
-  de.javarca.base.model;
+  de.javarca.model;
 requires
   org.apache.commons.io;
 `}</pre>
@@ -33,7 +33,7 @@ requires
 {`       /* Gradle */
 
 api(
-  project(":base-model")
+  project(":javarca-model")
 )
 implementation(
   "commons-io:commons-io"
@@ -44,7 +44,7 @@ implementation(
 
 <dependency>
   <groupId>de.javarca</groupId>
-  <artifactId>base-model</artifactId>
+  <artifactId>javarca-model</artifactId>
   <version>\${revision}</version>
 </dependency>
 <dependency>
