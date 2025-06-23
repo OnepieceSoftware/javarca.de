@@ -25,7 +25,7 @@ import maven from "../assets/maven.png";
 {` /* Java Module System¹ */
 
 requires transitive
-  de.javarca.base.model;
+  de.javarca.model;
 requires
   org.apache.commons.io;
 `}</pre>
@@ -33,7 +33,7 @@ requires
 {`       /* Gradle */
 
 api(
-  project(":base-model")
+  project(":javarca-model")
 )
 implementation(
   "commons-io:commons-io"
@@ -44,7 +44,7 @@ implementation(
 
 <dependency>
   <groupId>de.javarca</groupId>
-  <artifactId>base-model</artifactId>
+  <artifactId>javarca-model</artifactId>
   <version>\${revision}</version>
 </dependency>
 <dependency>
