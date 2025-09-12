@@ -1,26 +1,42 @@
 [
   {
-    "title": "What is a Java Module?"
+    "entry": "00",
+    "alt": "Modules in Java Development",
+    "ref": "MUeJeiNRFFA"
   },
   {
-    "title": "Defining Dependencies between Modules"
+    "entry": "01",
+    "alt": "Module Dependencies",
+    "ref": "rEA-QfhdSPo"
   },
   {
-    "title": "Managing Versions of 3rd party Modules"
+    "entry": "02",
+    "alt": "Version Management of 3rd party Modules",
+    "ref": "0mpw4edHFrg"
   },
   {
-    "title": "Using a Build System to retrieve and build Modules"
+    "entry": "soon",
+    "alt": "Using a Build System to retrieve and build Modules",
+    "ref": "not-available"
   },
   {
-    "title": "Managing conflicting Modules"
+    "entry": "soon",
+    "alt": "Managing conflicting Modules",
+    "ref": "not-available"
   },
   {
-    "title": "Staying carefree by using dependency analysis"
+    "entry": "soon",
+    "alt": "Staying carefree by using dependency analysis",
+    "ref": "not-available"
   },
   {
-    "title": "Staying carefree through automated updates"
+    "entry": "soon",
+    "alt": "Staying carefree through automated updates",
+    "ref": "not-available"
   },
   {
-    "title": "The JavaRCA.de recipe"
+    "entry": "soon",
+    "alt": "The JavaRCA.de recipe",
+    "ref": "not-available"
   }
 ]

@@ -103,9 +103,11 @@ import explore from "../data/explore.json";
 
             <div class="grid grid-cols-4 gap-2 my-4">
                 {videos.map((vid) => (
-                        <div class="relative w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
-                            <img src="/soon.jpg" alt={vid.title}/>
-                            <div class="absolute w-48 justify-center inset-0 text-gray-50 py-11 px-6">{vid.title}</div>
+                        <div class="w-50 h-auto bg-amber-50 bg-opacity-80 rounded shadow-md text-amber-800 p-2">
+                            <a href={`https://www.youtube.com/watch?v=${vid.ref}&list=PLWQK2ZdV4Yl2bV3dTE7qxJUhjV8a1uriD`}
+                               target="_blank" title={vid.alt}>
+                                <img src={`/${vid.entry}.png`} alt={vid.alt}/>
+                            </a>
                         </div>
                 ))}
             </div>
