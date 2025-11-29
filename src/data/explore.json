@@ -1,12 +1,17 @@
 [
   {
-    "ref": "xplore-2",
+    "ref": "xplore-1",
     "title": "Explore the Javarcade game app example sources",
     "link": "https://github.com/jjohannes/javarcade"
   },
   {
-    "ref": "xplore-4",
+    "ref": "xplore-2",
     "title": "How to set up a larger Gradle project",
     "link": "https://github.com/jjohannes/gradle-project-setup-howto"
+  },
+  {
+    "ref": "xplore-3",
+    "title": "How to idiomatically structure a large build with Gradle 8 or Gradle 9 ",
+    "link": "https://github.com/jjohannes/idiomatic-gradle"
   }
 ]
