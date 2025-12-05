@@ -1,0 +1,21 @@
+---
+import details from "../data/details.json";
+---
+
+{details.map((section) =>
+  <details class="bg-amber-50/80 rounded-xl shadow-md p-2 my-2">
+      <summary class="cursor-pointer bg-amber-100 rounded-md shadow-md text-gray-800 font-bold p-2">{section.heading}</summary>
+
+      <div class="bg-amber-100 rounded-md shadow-md text-gray-800 font-extralight text-justify p-4 mt-2">
+          <div class="">{section.context}</div>
+          <div class="pt-4">{section.problem}</div>
+          <div class="pt-4">{section.solution_idea}</div>
+          <div class="pt-4">{section.solution_impl}</div>
+          <ol class="list-decimal pl-4 pt-2">
+          {section.solution_list.map((listItem) => () => (
+            <li class="pb-2">{listItem}</li>
+          ))}
+          </ol>
+      </div>
+  </details>
+)}
