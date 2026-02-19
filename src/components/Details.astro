@@ -1,21 +1,78 @@
 ---
 import details from "../data/details.json";
+
+function escapeHtml(str: string) {
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+}
+function linkify(text: string) {
+  return escapeHtml(text)
+    .replace(/\[(\S+)\|(\S+)]/g, (_, text, link) => `<a target="_blank" href="https://${link}" class="text-blue-600 underline">${text}</a>`)
+    .replace(/\*([^*]+)\*/g, (_, text) => `<span class="italic">${text}</span>`)
+    .replace(/`([^`]+)`/g, (_, text) => `<span class="font-mono backdrop-grayscale-75">${text}</span>`);
+}
 ---
 
-{details.map((section) =>
-  <details class="bg-amber-50/80 rounded-xl shadow-md p-2 my-2">
-      <summary class="cursor-pointer bg-amber-100 rounded-md shadow-md text-gray-800 font-bold p-2">{section.heading}</summary>
+{details.map((section, index) =>
+  <details class="bg-amber-50/80 rounded-xl shadow-md p-2 my-2" id={`section-${index}`}>
+      <summary data-collapse={section.heading} class="cursor-pointer bg-amber-100 rounded-md shadow-md text-gray-800 font-bold p-2">{section.heading}</summary>
 
-      <div class="bg-amber-100 rounded-md shadow-md text-gray-800 font-extralight text-justify p-4 mt-2">
-          <div class="">{section.context}</div>
-          <div class="pt-4">{section.problem}</div>
-          <div class="pt-4">{section.solution_idea}</div>
-          <div class="pt-4">{section.solution_impl}</div>
-          <ol class="list-decimal pl-4 pt-2">
-          {section.solution_list.map((listItem) => () => (
-            <li class="pb-2">{listItem}</li>
+      <div class="bg-white rounded-md shadow-md text-gray-800 font-light text-justify p-4 mt-2">
+          <div set:html={linkify(section.context)}></div>
+          <div class="pt-4" set:html={linkify(section.problem)}></div>
+          <div class="pt-4" set:html={linkify(section.solution_idea)}></div>
+          <div class="pt-4" set:html={linkify(section.solution_impl)}></div>
+          <ol class="list-decimal pl-4">
+          {section.solution_list?.map((listItem) => (
+            <li class="pt-2" set:html={linkify(listItem)}></li>
           ))}
           </ol>
+          {section.figures?.map((fig) => (
+            <img class="mt-4" src={`/${fig.img}`} alt={fig.caption}/>
+            <div class="mt-2 italic text-center">{fig.caption}</div>
+          ))}
+          {section.table1 && (
+            <table class="table-fixed mt-4 p-4 bg-amber-50 rounded-lg">
+                <thead>
+                <tr>
+                    <th class="p-2 w-1/5">Module</th>
+                    <th class="p-2 w-1/5">Feature we use</th>
+                    <th class="p-2">Possible conflicts</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="p-2"><a target="_blank" href="https://commons.apache.org/proper/commons-io" class="text-blue-600 underline">Commons IO</a></td>
+                    <td class="p-2">Reading files</td>
+                    <td class="p-2">---</td>
+                </tr>
+                <tr>
+                    <td class="p-2"><a target="_blank" href="https://commons.apache.org/proper/commons-csv" class="text-blue-600 underline">Commons CSV</a></td>
+                    <td class="p-2">Parses CSV files</td>
+                    <td class="p-2">Has dependency to Commons IO and there may be conflict with the Commons IO version we define</td>
+                </tr>
+                <tr>
+                    <td class="p-2"><a target="_blank" href="https://slf4j.org" class="text-blue-600 underline">SLF4J</a></td>
+                    <td class="p-2">Logging</td>
+                    <td class="p-2">One of many logger implementations needs to be selected: slf4j-simple (logs directly), slf4j-jdk14 (logs via java.util.logging)</td>
+                </tr>
+                <tr>
+                    <td class="p-2"><a target="_blank" href="https://www.lwjgl.org" class="text-blue-600 underline">LWJGL</a></td>
+                    <td class="p-2">Graphics rendering</td>
+                    <td class="p-2">Provides multiple JARs for multiple operating systems; selection needs to be performed based on targer platfrom</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="mt-2 italic text-center">Table 1: Examples of version and variant conflicts in open source modules</div>
+          )}
+          {section.listings?.map((listing) => (
+            <pre class="mt-4 p-4 bg-gray-900 text-green-200 rounded-lg text-sm">{listing.code}</pre>
+            <div class="mt-2 italic text-center">{listing.caption}</div>
+          ))}
       </div>
   </details>
 )}
