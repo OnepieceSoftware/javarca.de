@@ -11,16 +11,15 @@ import maven from "../assets/maven.png";
     If you rely on frameworks that don't yet support the Module System well, you may use Gradle plainly.
     If you prefer Maven – or if you work on an existing Maven-based project – you can use that too, with or without the Module System.
     What matters most is being intentional and aware of your setup.
-    <!-- (You can learn more about each approach in the video series on the recipe.) -->
 </div>
 
-<div class="flex flex-row justify-center gap-x-60 my-2">
-    <Image src={java} alt="Java" style="height: 4rem; width: auto;" />
-    <Image src={gradle} alt="Gradle" style="height: 4rem; width: auto;" />
-    <Image src={maven} alt="Maven" style="height: 4rem; width: auto;" />
+<div class="flex flex-row w-full my-2">
+    <Image src={java} alt="Java" class="flex-1" style="height: 4rem; object-fit: contain;" />
+    <Image src={gradle} alt="Gradle" class="flex-1" style="height: 4rem; object-fit: contain;" />
+    <Image src={maven} alt="Maven" class="flex-1" style="height: 4rem; object-fit: contain;" />
 </div>
 
-<div class="flex flex-row gap-x-4">
+<div class="hidden lg:block"><div class="flex flex-row gap-x-2">
 <pre class="bg-gray-900 text-green-200 w-80 rounded-lg p-4 overflow-x-clip text-sm">
 {` /* Java Module System¹ */
 
@@ -52,4 +51,10 @@ implementation(
   <artifactId>commons-io</artifactId>
 </dependency>`}</pre>
 
-</div>
+</div></div>
+
+<img
+  src="/notation.png"
+  alt="Recipe"
+  class="lg:hidden w-full"
+/>
