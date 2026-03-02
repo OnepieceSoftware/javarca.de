@@ -70,7 +70,7 @@ function linkify(text: string) {
             <div class="mt-2 italic text-center">Table 1: Examples of version and variant conflicts in open source modules</div>
           )}
           {section.listings?.map((listing) => (
-            <pre class="mt-4 p-4 bg-gray-900 text-green-200 rounded-lg text-sm">{listing.code}</pre>
+            <pre class="mt-4 p-4 bg-gray-900 text-green-200 rounded-lg text-sm overflow-x-auto max-w-full">{listing.code}</pre>
             <div class="mt-2 italic text-center">{listing.caption}</div>
           ))}
       </div>
