@@ -16,6 +16,7 @@ import shelf from "../assets/shelf.png";
 import videos from "../data/videos.json";
 import gradleVideos from "../data/gradle.json";
 import presentations from "../data/presentations.json";
+import users from "../data/users.json";
 import explore from "../data/explore.json";
 ---
 
@@ -74,7 +75,7 @@ import explore from "../data/explore.json";
         </div>
 
         <a id="notation"></a>
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4">
             Get Started: Clarify your choice of Dependency Definition notation
         </h2>
 
@@ -88,7 +89,7 @@ import explore from "../data/explore.json";
         </div>
 
         <a id="recipe"></a>
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             The Recipe
         </h2>
 
@@ -98,12 +99,12 @@ import explore from "../data/explore.json";
             <a class="content-center" download="javarca-recipe.png" href="/recipe.png">(Download Recipe)</a>
         </div>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             The Recipe in Detail
         </h2>
         <Details/>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             Video Series
         </h2>
 
@@ -118,7 +119,21 @@ import explore from "../data/explore.json";
             ))}
         </div>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
+            Users
+        </h2>
+
+        <div class="grid grid-cols-4 gap-8 my-4">
+            {users.map((p) => (
+              <div class="h-auto bg-amber-50/80 rounded shadow-md text-amber-800 p-2">
+                  <a href={p.link} target="_blank" title={p.title} class="flex justify-center items-center">
+                      <img src={`logo-${p.ref}.png`} alt={p.title} style="height: 4rem; width: 4rem;"/>
+                  </a>
+              </div>
+            ))}
+        </div>
+
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             Explore
         </h2>
 
@@ -132,7 +147,7 @@ import explore from "../data/explore.json";
             ))}
         </div>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             Dive deeper into Java modularity and Gradle
         </h2>
 
@@ -148,7 +163,7 @@ import explore from "../data/explore.json";
             ))}
         </div>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             Presentations
         </h2>
 
@@ -162,7 +177,7 @@ import explore from "../data/explore.json";
             ))}
         </div>
 
-        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-2xl font-bold text-center p-4 my-4">
+        <h2 class="flex justify-center bg-amber-700/80 rounded-xl shadow-md text-gray-50 text-lg lg:text-2xl font-bold text-center p-4 my-4">
             Support
         </h2>
 

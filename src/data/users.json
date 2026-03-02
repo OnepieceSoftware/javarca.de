@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "hiero",
+    "title": "Crypto, token, consensus, file, and smart contract services for a Hiero based network",
+    "link": "https://github.com/hiero-ledger/hiero-consensus-node"
+  },
+  {
+    "ref": "jabref",
+    "title": "Graphical Java application for managing BibTeX and BibLaTeX (.bib) databases",
+    "link": "https://github.com/JabRef/jabref"
+  },
+  {
+    "ref": "sava",
+    "title": "Solana Java SDK",
+    "link": "https://github.com/sava-software/sava"
+  },
+  {
+    "ref": "you",
+    "title": "You use the recipe? Let us know and add your own project here!",
+    "link": "mailto:javarcade@onepiece.software"
+  }
+]
