@@ -1,5 +1,9 @@
 [
-
+  {
+    "ref": "202601.png",
+    "title": "Carefree Dependency Management for Java Projects",
+    "link": "https://meine.doag.org/events/javaland/2026/agenda/#agendaId.6927"
+  },
   {
     "ref": "202503.png",
     "title": "Carefree Dependency Management for Java Projects",
@@ -16,9 +20,14 @@
     "link": "https://github.com/jjohannes/java-module-system/blob/main/docs/java-modules-and-gradle-2025.pdf"
   },
   {
-    "ref": "202402.jpg",
+    "ref": "202403.jpg",
     "title": "Boosting Developer Productivity Through Better Modularity",
     "link": "https://dpe.org/sessions/jendrik-johannes/boosting-developer-productivity-through-better-modularity"
+  },
+  {
+    "ref": "202402.jpg",
+    "title": "Combining Java Modules and Gradle for elegant project structures",
+    "link": "https://www.java-forum-stuttgart.de/vortraege/das-java-modul-system-klug-mit-gradle-kombinieren/"
   },
   {
     "ref": "202401.jpg",
