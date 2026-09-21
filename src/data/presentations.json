@@ -1,5 +1,10 @@
 [
   {
+    "ref": "202602.png",
+    "title": "9 years after Java 9: What do we do with the Module System?",
+    "link": "https://github.com/jjohannes/starfleet-database/blob/main/docs/java-modules-2026.pdf"
+  },
+  {
     "ref": "202601.png",
     "title": "Carefree Dependency Management for Java Projects",
     "link": "https://meine.doag.org/events/javaland/2026/agenda/#agendaId.6927"
